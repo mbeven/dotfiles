@@ -29,9 +29,11 @@ call plug#begin('~/.vim/bundle')
 " Define bundles via Github repos
 Plug 'altercation/vim-colors-solarized'
 Plug 'christoomey/vim-run-interactive'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'kchmck/vim-coffee-script'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'pbrisbin/vim-mkdir'
+Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/syntastic'
 Plug 'slim-template/vim-slim'
 Plug 'thoughtbot/vim-rspec'
