@@ -138,7 +138,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-" configure syntastic syntax checking to check on open as well as save
+" Configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 
@@ -152,16 +152,11 @@ set complete+=kspell
 " Always use vertical diffs
 set diffopt+=vertical
 
-" Local config
-if filereadable($HOME . "/.vimrc.local")
-  source ~/.vimrc.local
-endif
-
-" Solarized colours
+" Use the solarized dark colour scheme
 set background=dark
 colorscheme solarized
 
-" Set the paste toggle key to F2
+" Set the paste mode toggle key to F2
 set pastetoggle=<F2>
 
 " Airline customisation
@@ -169,8 +164,13 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline_powerline_fonts = 1
 
-" Change buffers with Tab and Shift-Tab
+" Move to next buffer with Tab and previous buffer with Shift-Tab
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 
 set clipboard=unnamedplus,unnamed,autoselect
+
+" Local config
+if filereadable($HOME . "/.vimrc.local")
+  source ~/.vimrc.local
+endif
