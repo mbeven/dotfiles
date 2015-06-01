@@ -163,3 +163,14 @@ colorscheme solarized
 
 " Set the paste toggle key to F2
 set pastetoggle=<F2>
+
+" Airline customisation
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+let g:airline_powerline_fonts = 1
+
+" Change buffers with Tab and Shift-Tab
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
+
+set clipboard=unnamedplus,unnamed,autoselect
