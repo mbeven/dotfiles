@@ -1,0 +1,23 @@
+# Tig configuration file
+# lives-at: ~/.tigrc
+
+#set line-graphics = "utf-8"
+
+# Maybe this isn't ready yet, watch https://github.com/jonas/tig/commit/5d38144389af26f7e329b1aa6952b96e5e012607
+#set refresh-mode = "periodic"
+#set refresh-interval = 1
+
+# Checkout a file from tree view
+bind generic <Ctrl-F> !?git checkout %(commit) %(file)
+
+# Amend the last commit
+bind generic + !git commit --amend
+
+# Copy commit ID to clipboard
+bind generic 9 !@sh -c "echo -n %(commit) | xclip -selection c"
+
+# Add/edit notes for the current commit used during a review
+bind generic T !git notes edit %(commit)
+
+# Enter Git’s interactive add for fine-grained staging of file content
+bind generic I !git add -i %(file)
