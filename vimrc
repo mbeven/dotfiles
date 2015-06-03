@@ -170,6 +170,11 @@ nnoremap <S-Tab> :bprevious<CR>
 
 set clipboard=unnamedplus,unnamed,autoselect
 
+" Toggle nerdtree with <leader>1 (Similar to IntelliJ IDEA file browser) or
+" with <leader>nt
+map <silent> <leader>1 :NERDTreeToggle<CR>
+map <silent> <leader>nt :NERDTreeToggle<CR>
+
 " Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
