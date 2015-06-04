@@ -21,3 +21,6 @@ bind generic T !git notes edit %(commit)
 
 # Enter Git’s interactive add for fine-grained staging of file content
 bind generic I !git add -i %(file)
+
+# Make G jump to the end like vim
+bind generic G move-last-line

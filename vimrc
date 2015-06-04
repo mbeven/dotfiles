@@ -67,6 +67,14 @@ set expandtab
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
 
+" Configure CtrlP
+let g:ctrlp_extensions = ['tag']
+let g:ctrlp_root_markers = ['.ctrlp', '.cabal-sandbox']
+nnoremap <C-b> :CtrlPBuffer<CR>
+nnoremap <C-m> :CtrlPMixed<CR>
+nnoremap <leader>t :CtrlPTag<CR>
+nnoremap <leader>r :CtrlPMRUFiles<CR>
+
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
   " Use Ag over Grep
@@ -174,6 +182,14 @@ set clipboard=unnamedplus,unnamed,autoselect
 " with <leader>nt
 map <silent> <leader>1 :NERDTreeToggle<CR>
 map <silent> <leader>nt :NERDTreeToggle<CR>
+
+" Save a file with sudo
+cnoremap w!! w !sudo tee %
+
+" Allows :diffget and :diffput on the current line only. Achieves this by
+" going into visual mode on the whole line, and then running the command
+nnoremap <silent> <leader>dp V:diffput<cr>
+nnoremap <silent> <leader>dg V:diffget<cr>
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
