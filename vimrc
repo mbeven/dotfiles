@@ -11,6 +11,16 @@ set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
+set nocompatible  " Use Vim defaults instead of 100% vi compatibility
+
+" Use case-smart searching
+" These two options, when set together, will make /-style searches
+" case-sensitive only if there is a capital letter in the search expression.
+" *-style searches continue to be consistently case-sensitive.
+set ignorecase
+set smartcase
+
+set hlsearch            " highlight the last searched term
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -178,10 +188,8 @@ nnoremap <S-Tab> :bprevious<CR>
 
 set clipboard=unnamedplus,unnamed,autoselect
 
-" Toggle nerdtree with <leader>1 (Similar to IntelliJ IDEA file browser) or
-" with <leader>nt
+" Toggle nerdtree with <leader>1 (Similar to IntelliJ IDEA file browser)
 map <silent> <leader>1 :NERDTreeToggle<CR>
-map <silent> <leader>nt :NERDTreeToggle<CR>
 
 " Save a file with sudo
 cnoremap w!! w !sudo tee %
