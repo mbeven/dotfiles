@@ -3,7 +3,7 @@
  *
  * lives-at: ~/.slate.js
  *
- * Usage: 
+ * Usage:
  *
  * hyper = ctrl + cmd + alt (caps lock key should be remapped to this on hold)
  *
@@ -438,7 +438,7 @@ slate.bindAll({
             x: $('center', 'bottom'),
             //'return': $('center', 'center'),
         },
-        // direct focus 
+        // direct focus
         a: $.focus('Spotify'),
         b: $.focus('Google Chrome'),
         c: $.focus('Calendar'),
@@ -449,7 +449,9 @@ slate.bindAll({
         h: $.focus('HipChat'),
         i: $.focus('iTerm'),
         j: $.focus('IntelliJ IDEA'),
+        l: $.focus('Microsoft Lync'),
         m: $.focus('Mail'),
+        o: $.focus('Microsoft Outlook'),
         p: $.focus('Preview'),
         s: $.focus('Spotify'),
         t: $.focus('Terminal'),
