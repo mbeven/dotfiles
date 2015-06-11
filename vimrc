@@ -199,6 +199,15 @@ cnoremap w!! w !sudo tee %
 nnoremap <silent> <leader>dp V:diffput<cr>
 nnoremap <silent> <leader>dg V:diffget<cr>
 
+" Snippet trigger configuration. Do not use <tab> if you use
+" https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
 " Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
