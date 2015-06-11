@@ -1,2 +1,11 @@
+" Leader
+let mapleader = ","
+
 set relativenumber
 set hlsearch
+
+" Mapping vim commands to IntelliJ actions. To discover supported actions
+" type :actionlist command inside the ide.
+map <Leader>f :action ReformatCode<CR>
+map <Leader>cc :action CommentByLineComment<CR>
+map <Leader>cu :action CommentByLineComment<CR>
