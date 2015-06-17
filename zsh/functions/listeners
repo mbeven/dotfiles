@@ -1,0 +1,4 @@
+# lists processes listening on tcp ports
+listeners() {
+    lsof -i -P -n -sTCP:LISTEN $@
+}

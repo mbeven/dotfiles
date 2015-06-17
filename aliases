@@ -5,6 +5,9 @@ alias mkdir="mkdir -p"
 alias e="$EDITOR"
 alias v="$VISUAL"
 
+# Could use Control-l for this but I use that instead for tmux pane movement
+alias c='clear'
+
 # Bundler
 alias b="bundle"
 
