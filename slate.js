@@ -453,6 +453,7 @@ slate.bindAll({
         m: $.focus('Mail'),
         o: $.focus('Microsoft Outlook'),
         p: $.focus('Preview'),
+        q: $.focus('CodeBox'), // todo: Once transition to quiver is complete change this
         s: $.focus('Spotify'),
         t: $.focus('Terminal'),
         w: $.focus('1Password'),
