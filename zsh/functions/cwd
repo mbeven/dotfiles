@@ -1,0 +1,5 @@
+# Copy the current working directory to the clipboard
+
+function cwd() {
+  pwd | tr -d '\n' | pbcopy
+}

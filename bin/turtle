@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -eu
+
+command="runhaskell $@"
+
+nix-shell --command "${command}"

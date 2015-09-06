@@ -5,8 +5,11 @@ alias mkdir="mkdir -p"
 alias e="$EDITOR"
 alias v="$VISUAL"
 
+# Git
+alias gbv="git branch -vv"
+
 # Could use Control-l for this but I use that instead for tmux pane movement
-alias c='clear'
+alias c="clear"
 
 # Bundler
 alias b="bundle"
