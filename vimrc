@@ -67,6 +67,9 @@ augroup vimrcEx
 
   " Allow stylesheets to autocomplete hyphenated words
   autocmd FileType css,scss,sass setlocal iskeyword+=-
+
+  " Automatically wrap at 120 characters and set shiftwidth to 4 for Java
+  autocmd BufNewFile,BufRead *.java setlocal textwidth=120 shiftwidth=4
 augroup END
 
 " Softtabs, 2 spaces
@@ -192,6 +195,12 @@ set clipboard=unnamedplus,unnamed,autoselect
 " Toggle nerdtree with <leader>1 (Similar to IntelliJ IDEA file browser)
 map <silent> <leader>1 :NERDTreeToggle<CR>
 
+" <Leader>n: NERDTreeFind
+nnoremap <silent> <Leader>n :NERDTreeFind<cr> :wincmd p<cr>
+
+"let g:unite_enable_start_insert=1
+"nnoremap <space>/ :Unite grep:.<CR>
+
 " Save a file with sudo
 cnoremap w!! w !sudo tee %
 
@@ -208,6 +217,27 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+" MacVim settings (we need another test here to see if it is MacVim and not ordinary GVim)
+if has('gui_running')
+    set transparency=15
+    set guifont=Source\ Code\ Pro\ for\ Powerline:h14
+    set guioptions-=m  "remove menu bar
+    set guioptions-=T  "remove toolbar
+    set guioptions-=r  "remove right-hand scroll bar
+endif
+
+" Make window split borders look nicer.
+set fillchars+=vert:\|
+hi! VertSplit guifg=fg guibg=bg
+hi! VertSplit ctermfg=fg ctermbg=bg term=NONE
+
+" CtrlP Most Recently Used
+nnoremap <silent> <leader>m :CtrlPMRU<CR>
+
+" Uppercase the current word from insert mode
+" FIXME For some reason this isn't working
+"inoremap <C-u> <ESC>viwUea
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
