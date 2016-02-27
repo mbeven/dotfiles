@@ -11,6 +11,8 @@
  * ctrl + cmd + down    -> Move the window to the next screen.
  * ctrl + cmd + left    -> Push window to the left with half size. If already done, move it to the next screen.
  * ctrl + cmd + right   -> Push window to the right with half size. If already done, move it to the next screen.
+ *
+ * Log messages appear in the Max OS X Console.
  */
 
 S.log("[SLATE] -------------- About to loading config --------------");
@@ -374,7 +376,7 @@ var twoMonitor = S.op("layout", { "name" : twoMonitorLayout });
 var oneMonitor = S.op("layout", { "name" : oneMonitorLayout });
 var universalLayout = function() {
   // Should probably make sure the resolutions match but w/e
-  S.log("SCREEN COUNT: " + S.screenCount());
+  S.log("Running univeral layout. [screenCount=" + S.screenCount() + "]");
   if (S.screenCount() === 1) {
     oneMonitor.run();
   } else if (S.screenCount() === 2) {
