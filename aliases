@@ -21,5 +21,10 @@ alias s="rspec"
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
 
+# Nix package manager
+alias ni="nix-env --install"
+alias ns="nix-env -qa | grep"
+alias nu="nix-channel --update nixpkgs; nix-env -u '*'; nix-collect-garbage -d"
+
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
