@@ -97,5 +97,11 @@ _load_settings() {
 }
 _load_settings "$HOME/.zsh/configs"
 
+# Hide user@hostname in agnoster theme prompt, which shows unless $USER == $DEFAULT_USER
+DEFAULT_USER=$USER
+
+# Oh my zsh configuration
+[[ -f ~/.zshrc.oh-my-zsh ]] && source ~/.zshrc.oh-my-zsh
+
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
