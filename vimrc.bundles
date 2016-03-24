@@ -26,6 +26,8 @@ com! -nargs=+  -bar Bundle call VundleToPlug("Bundle", <args>)
 
 call plug#begin('~/.vim/bundle')
 
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+
 " Define bundles via Github repos
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
@@ -35,7 +37,6 @@ Plug 'christoomey/vim-run-interactive'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'godlygeek/tabular'
-Plug 'kchmck/vim-coffee-script'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'myusuf3/numbers.vim'
 Plug 'pbrisbin/vim-mkdir'
@@ -51,19 +52,38 @@ Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'vim-ruby/vim-ruby'
-Plug 'vim-scripts/tComment'
 
 " Snippet engine
 Plug 'SirVer/ultisnips'
 
 " Snippet library
 Plug 'honza/vim-snippets'
+
+" Scala
+"Plug 'derekwyatt/vim-scala'
+
+" Haskell
+" TODO vim-haskell-now
+
+" Completion
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+
+" Fuzzy search
+"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+"Plug 'Shougo/unite.vim'
+"Plug 'Shougo/unite-session'
+"Plug 'Shougo/neomru.vim'
+"Plug 'thinca/vim-unite-history'
+
+" Unused plugins
+"Plug 'kchmck/vim-coffee-script'
+"Plug 'vim-ruby/vim-ruby'
+"Plug 'vim-scripts/tComment'
+"Plug 'tpope/vim-rails'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
